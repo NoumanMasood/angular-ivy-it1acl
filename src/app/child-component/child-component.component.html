@@ -1,0 +1,20 @@
+<p *ngIf="show">
+	child-component works!
+</p>
+{{show}}
+
+<form>
+	<fieldset>
+		<div class="row">
+			<label class="col-6">Full Name</label>
+			<input class="col-6" type="text" [formControl]="fullName" name="fullName" placeholder="Enter Name">
+    </div>
+			<br/>
+			<div class="row">
+				<label class="col-6">Email</label>
+				<input class="col-6" type="text" name="email" [formControl]="email" placeholder="Enter Email">
+    </div>
+				<button class="btn btn-primary" (click)="saved()">Submit</button>
+	</fieldset>
+	{{fullName.value}}
+</form>
